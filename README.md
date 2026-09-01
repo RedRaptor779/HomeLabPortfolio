@@ -4,3 +4,4 @@ A digital portfolio and documentation of my homelab hardware, software, and conf
 All the Hardware is mounted into a lamp that fits the 10in rack size.
 
 ![Photo of Homelab](/frontPhoto.jpg)
+![Homelab Network Diaram](/Network/homeLabNetworkDiagram.png)
