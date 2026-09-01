@@ -4,6 +4,9 @@ Services and Media
 ## ProxMox Virtual Environment
 https://192.168.100.4:8006/
 
+## 6tb External SAS Drive
+Connected via USB->SAS adapter and mounted in a drive tray 
+
 ## Containers 
 
 ### Docker Music Stack
