@@ -7,7 +7,7 @@ GE1/1
 [Cisco ASA](https://github.com/RedRaptor779/HomeLabPortfolio/blob/main/Network/Cisco_ASA_5506-X.md#interfaces) GE1/2 - 192.168.100.1  
 
 GE1/7  
-[PVE1]() - 192.168.100.3  
+[PVE1](https://github.com/RedRaptor779/HomeLabPortfolio/blob/main/Machines/PVE1.md#pve1-dell-optiplex-3070) - 192.168.100.3  
 
 GE1/8  
 [PVE2]() - 192.168.100.4  
