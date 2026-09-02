@@ -1,7 +1,7 @@
 # Cisco ASA 5506-X
 
 This firewall connects to my home WiFi router (out of scope for this documentation) via a double NAT. For security and simplicity, this was the best implementation. ACL rules on the firewall isolate 
-my home WiFi network from my Lab network with few exceptions such as DNS. Management is handled via a TailScale Subnet Router []. Connects to the TP-Link Switch [] for Layer 2 connectivity. 
+my home WiFi network from my Lab network with few exceptions such as DNS. Management is handled via a [TailScale Subnet Router](https://github.com/RedRaptor779/HomeLabPortfolio/blob/main/Machines/PVE1.md#tailscale-subnet-router). Connects to the [TP-Link Switch](https://github.com/RedRaptor779/HomeLabPortfolio/blob/main/Network/TP-Link_TL-SG108E.md#tp-link-tl-sg108e-easy-smart-managed-switch) for Layer 2 connectivity. 
 
 ## Interfaces
 
