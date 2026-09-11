@@ -12,7 +12,9 @@ on port 3493 that allows other systems to read and communicate with NUT for easy
 
 ## Containers 
 
-### Tailscale Subnet Router
+### Tailscale Subnet Router  
+192.169.100.99  
+  
 LXC 100 tailscale-gateway-mgmt  
 
 Running a [TailScale Subnet Router](https://tailscale.com/docs/features/subnet-routers) gateway for secure access to the entire internal homelab network. Allows for access to all services and hardware from outside the local 
