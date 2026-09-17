@@ -1,0 +1,45 @@
+services:
+  navidrome:
+    image: deluan/navidrome:latest
+    container_name: navidrome
+    user: 1000:1000
+    ports:
+      - '4533:4533'
+    restart: unless-stopped
+    environment:
+      ND_SCANSCHEDULE: 1h
+      ND_LOGLEVEL: info
+      ND_SESSIONTIMEOUT: 24h
+      ND_BASEURL: ""
+    volumes:
+      - /opt/media/docker-configs/navidrome:/data
+      - /opt/media/music:/music:ro
+
+  lidarr:
+    image: lscr.io/linuxserver/lidarr:latest
+    container_name: lidarr
+    ports:
+      - '8686:8686'
+    restart: unless-stopped
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/New_York
+    volumes:
+      - /opt/media/docker-configs/lidarr:/config
+      - /opt/media/music:/music
+      - /opt/media/downloads:/downloads
+
+  lidarr-youtube-downloader:
+    image: angrido/lidarr-downloader:latest
+    container_name: lidarr-youtube-downloader
+    ports:
+      - '5005:5000'
+    restart: unless-stopped
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/New_York
+    volumes:
+      - /opt/media/docker-configs/lidarr-downloader:/config
+      - /opt/media/music:/music
