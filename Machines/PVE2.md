@@ -12,7 +12,7 @@ Connected via USB->SAS adapter and mounted in a drive tray
 ### Docker Music Stack
 LXC 100 music-stack http://192.168.100.7/
 - **Navidrome** - [link](https://www.navidrome.org/)  
-  Self hosted music streaming client. Supports Subsonic API as well as a native web interface.
+  Self hosted music streaming client. Supports Subsonic API as well as a native web interface. Runs on port 4533.  
 - **Lidarr** - [link](https://lidarr.audio/)  
-  Self hosted music management and automation tool. 
+  Self hosted music management and automation tool. Runs on port 8686.  
   
