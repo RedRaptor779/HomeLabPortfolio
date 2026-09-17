@@ -1,0 +1,25 @@
+services:
+  homarr:
+    container_name: homarr
+    image: ghcr.io/homarr-labs/homarr:latest
+    restart: unless-stopped
+    volumes:
+      - /root/appdata:/appdata
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - SECRET_ENCRYPTION_KEY={REDACTED}
+    ports:
+      - '7575:7575'
+  peanut:
+    image: brandawg93/peanut:latest
+    container_name: peanut
+    restart: unless-stopped
+    ports:
+      - '8080:8080'
+    volumes:
+      - /opt/peanut/config:/config
+    environment:
+      - WEB_PORT=8080
+      - WEB_USERNAME={REDACTED}
+      - WEB_PASSWORD={REDACTED}
+      - AUTH_DISABLED={REDACTED}
