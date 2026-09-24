@@ -30,6 +30,7 @@ access-list OUTSIDE_IN extended permit tcp 10.0.0.0 255.255.255.0 host 192.168.1
 ```
 
 ### Invidious Allow
+Only allow traffic from outside the firewall for Invidious:
 ```Cisco
 object network obj-Invidious
  nat (inside,outside) static interface service tcp 3000 3000 
