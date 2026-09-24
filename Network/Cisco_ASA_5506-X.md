@@ -19,18 +19,27 @@ Security Level 100
 
 ### DNS Allow
 Only allow traffic from outside the firewall for DNS:  
-```cisco
+```ios
 object network adguard-dns-udp
  host 192.168.100.5  
 object network adguard-dnss-tcp  
- host 192.168.100.5  
+ host 192.168.100.5
+
 access-list OUTSIDE_IN extended permit udp 10.0.0.0 255.255.255.0 host 192.168.100.5 eq domain  
 access-list OUTSIDE_IN extended permit tcp 10.0.0.0 255.255.255.0 host 192.168.100.5 eq domain
 ```
 
+### Invidious Allow
+```Cisco
+object network obj-Invidious
+ nat (inside,outside) static interface service tcp 3000 3000 
+
+access-list OUTSIDE_IN line 3 extended permit tcp 10.0.0.0 255.255.255.0 host 192.168.100.8 eq 3000 (hitcnt=112) 0xd6028d32
+```
+
 ## Routing (Network Isolation)
 Static Route for routing internet traffic up to the WiFi router:  
-```cisco
+```Cisco
 route outside 0.0.0.0 0.0.0.0 10.0.0.1 1
 ```
 
